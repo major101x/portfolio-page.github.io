@@ -1,0 +1,228 @@
+:root {
+  /* CSS HEX */
+  --navbar: #335c81ff;
+  --section1: #0d3030;
+  --section1b: #040f0fff;
+  --section2: #2d3a3aff;
+  --section2b: #736372ff;
+  --section3: #248232ff;
+  --section3b: #1f1f1f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
+body {
+  font-size: 1.8rem;
+  background-color: var(--section3b);
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--navbar);
+  width: 100%;
+  /* height: 6vh; */
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+  box-shadow: 0 5px 5px 0 black;
+}
+@media (max-width: 480px) {
+    #navbar {
+        justify-content: center;
+    }
+}
+#navbar ul {
+  list-style-type: none;
+  display: flex;
+  margin-right: 1.5rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-family: "Inter", sans-serif;
+  padding: 2rem;
+  font-size: 2.2rem;
+  display: block;
+}
+.nav-link:hover {
+  background-color: #294866;
+  cursor: pointer;
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, var(--section1) 0%, var(--section1b) 100%);
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#welcome-section h1 {
+  font-size: 6rem;
+  font-family: "Raleway", serif;
+  font-weight: 700;
+}
+#welcome-section p {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 200;
+}
+
+#projects {
+  text-align: center;
+  background-color: var(--section2b);
+  color: white;
+  padding: 10rem 2rem;
+}
+#project-header {
+  margin: 0 auto 6rem auto;
+  font-size: 4.2rem;
+  border-bottom: 2px solid white;
+  max-width: 640px;
+  font-family: "Raleway", serif;
+}
+.project-grid {
+  display: grid;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  justify-content: center;
+}
+.project-tile {
+  text-decoration: none;
+  color: white;
+  background-color: var(--section2);
+  border-radius: 2px;
+  box-shadow: 1px 1px 5px 0px black;
+  font-family: "Inter", sans-serif;
+}
+.project-name {
+  padding: 2rem 0.5rem;
+}
+.project-image {
+  width: 100%;
+  height: calc(100% - 6.5rem);
+  object-fit: cover;
+  display: block;
+}
+.code {
+  color: var(--section2);
+  transition: color 0.3s ease-out;
+  font-family: "Inter", sans-serif;
+}
+.project-tile:hover .code {
+  color: yellow;
+  cursor: pointer;
+}
+.btn {
+  text-decoration: none;
+  color: white;
+  font-family: "Inter", sans-serif;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+.btn.btn-main {
+  background-color: var(--section2);
+  box-shadow: 1px 1px 5px 0px black;
+  transition: background-color 0.2s ease-in-out;
+}
+.btn.btn-main i {
+  margin-left: 5px;
+  transition: transform 0.25s ease-in-out;
+}
+.btn.btn-main:hover {
+  background-color: brown;
+}
+.btn.btn-main:hover i {
+  transform: translateX(5px);
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--section3b);
+    color: white;
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+}
+@media (max-width: 480px) {
+    #contact {
+        height: 100vh;
+    }
+}
+#contact h2{
+    font-family: "Raleway", sans-serif;
+    font-size: 6rem;
+}
+#contact p {
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-weight: 200;
+  }
+#contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    max-width: 80%;
+    font-family: "Poppins", sans-serif;
+}
+.contact-details {
+
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 1px black;
+    transition: transform 0.3s ease-out;
+}
+.contact-details:hover {
+    transform: translateY(8px);
+}
+
+#footer {
+    display: flex;
+    border-top: 5px solid brown;
+    background-color: var(--section3b);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    justify-content: space-evenly;
+    font-weight: 300;
+    padding: 2rem;
+}
+@media (max-width: 520px) {
+    #footer {
+        flex-direction: column;
+    }
+}
+#footer p {
+    margin: 2rem;
+}
+#footer a {
+    margin: 2rem 2rem 2rem 0;
+    text-decoration: none;
+    color: white;
+}
